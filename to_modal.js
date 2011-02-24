@@ -1,10 +1,20 @@
 (function($) {
-  $.fn.toModal = function(type) {
+  $.fn.toModal = function(options) {
+
+    // TODO: Add default settings
+    // var settings = {
+    // ...
+    // };
+
     return this.each(function() {
-      
+
+      // if (options) {
+      //   $.extend(settings, options);
+      // }
+
       var $this = $(this);
       var overlay = $('<div id="toModalOverlay" />').prependTo('body');
-      
+
       overlay.css({
         'z-index': 100,
         'background-color': '#000',
@@ -12,7 +22,7 @@
         'position': 'fixed',
         'top': 0, 'right': 0, 'bottom': 0, 'left': 0
       });
-      
+
       $this.css({
         'z-index': 101,
         'margin-top': -($this.height() / 2),
