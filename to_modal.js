@@ -7,7 +7,7 @@
       showOnLoad: false,
       openElement: ".toModalOpen",
       closeElement: ".toModalClose",
-      overlayElement: "#toModalOverlay"
+      overlayElementId: "toModalOverlay"
     };
 
     return this.each(function() {
@@ -17,7 +17,7 @@
       }
 
       var popup = $(this);
-      var overlay = $('<div id="' + settings.overlayElement + '" />').prependTo('body');
+      var overlay = $('<div id="' + settings.overlayElementId + '" />').prependTo('body');
       var modal = [popup, overlay];
       
       var isDisplay = function() {
