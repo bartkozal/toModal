@@ -1,3 +1,6 @@
+/* Documentation, source code: https://github.com/bkozal/toModal */
+/* Author: http://www.bkozal.com */
+
 (function($) {
   $.fn.toModal = function(options) {
 
