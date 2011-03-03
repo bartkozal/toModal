@@ -1,10 +1,8 @@
 # toModal
 
-toModal is a simply, cross-browser and easy in configuration jQuery plugin which generate modal popups
+toModal is a simply and cross-browser compatible jQuery plugin which transform div into modal popup
 
 ## How to start
-
-Check this example:
 
 script.js
 
@@ -47,13 +45,13 @@ index.html
 
 ### Settings
 
-You can modify some options by hash array putted as toModal function argument:
+You can modify some options by hash array putted as function argument:
 
     $("#popup").toModal({ showOnLoad: true, opacity: 1, overlayElementId: 'overlay' });
 
 Available parameters:
 
- * opacity - overlay background opacity (default: **0.85**)
+ * opacity - opacity of overlay background (default: **0.85**)
  * zIndex - z-index of modal popup (default: **100**)
  * showOnLoad - display popup on load (default: **false**)
  * openElement - class or id of element which open popup (default: **.toModalOpen**)
@@ -64,15 +62,13 @@ Available parameters:
 
 Add custom css to overlay element
 
-style.css
-
     #toModalOverlay {
       background-color: red;
     }
 
 ### How to put multiply popups on the same page
 
-Set different elements for opening and closing popups
+Set different opening and closing elements for popups
 
     $("#popup").toModal({ openElement: 'modalOneOpen', closeElement: 'modalOneClose' });
     $("#popup2").toModal({ openElement: 'modalTwoOpen', closeElement: 'modalTwoClose' });
