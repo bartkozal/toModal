@@ -22,7 +22,7 @@
       var popup = $(this);
       var overlay = $('<div id="' + settings.overlayElementId + '" />').prependTo('body');
       var modal = [popup, overlay];
-      
+
       var isDisplay = function() {
         return (settings.showOnLoad) ? 'block' : 'none';
       }
@@ -47,10 +47,12 @@
 
       $(settings.openElement).click(function() {
         $.each(modal, function() {this.show()});
+        return false;
       });
 
       $(settings.closeElement).click(function() {
         $.each(modal, function() {this.hide()});
+        return false;
       });
 
 
